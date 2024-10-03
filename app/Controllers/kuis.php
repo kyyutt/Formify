@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-use App\Models\KuisionerModel; // Pastikan kamu sudah membuat model
+use App\Models\KuisionerModel; 
 use CodeIgniter\Controller;
 
-class KuisionerController extends Controller
+class Kuis extends Controller
 {
     public function index()
     {

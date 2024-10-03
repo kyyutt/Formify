@@ -34,13 +34,13 @@ $uri3 = $uri[3] ?? '';
                     </a>
                     <ul class="submenu <?= ($uri1 == 'users') ? 'active' : '' ?>">
                         <li class="submenu-item <?= ($uri2 == 'students') ? 'active' : '' ?>">
-                            <a href="/admin/users/students">Students</a>
+                            <a href="/admin/students">Students</a>
                         </li>
                         <li class="submenu-item <?= ($uri2 == 'lecturers') ? 'active' : '' ?>">
-                            <a href="/admin/users/lecturers">Lecturers</a>
+                            <a href="/admin/lecturers">Lecturers</a>
                         </li>
                         <li class="submenu-item <?= ($uri2 == 'staff') ? 'active' : '' ?>">
-                            <a href="/admin/users/staff">Staff</a>
+                            <a href="/admin/staff">Staff</a>
                         </li>
                     </ul>
                 </li>

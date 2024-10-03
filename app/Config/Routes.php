@@ -5,6 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-$routes->get('/about', 'Home::about');
-$routes->get('datatable', 'Table::index');
+$routes->get('/admin', 'Home::index');
+$routes->get('/admin/students', 'Mahasiswa::index'); 
+$routes->get('admin/evaluation/services', 'Evaluation::layanan');
+

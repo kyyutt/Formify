@@ -45,7 +45,7 @@ class MahasiswaController extends Controller
             'angkatan' => $this->request->getPost('angkatan')
         ]);
 
-        return redirect()->to('/admin/mahasiswa/index')->with('success', 'Mahasiswa successfully added');
+        return redirect()->to('/admin/mahasiswa')->with('success', 'Mahasiswa successfully added');
     }
 
     // Show form to edit existing mahasiswa
@@ -53,7 +53,7 @@ class MahasiswaController extends Controller
     {
         $data['mahasiswa'] = $this->mahasiswaModel->where('npm', $npm)->first();
         if (!$data['mahasiswa']) {
-            return redirect()->to('/admin/mahasiswa/index')->with('error', 'Mahasiswa not found');
+            return redirect()->to('/admin/mahasiswa')->with('error', 'Mahasiswa not found');
         }
 
         return view('admin/mahasiswa/edit', $data);
@@ -65,7 +65,7 @@ class MahasiswaController extends Controller
         // Find the mahasiswa first
         $mahasiswa = $this->mahasiswaModel->where('npm', $npm)->first();
         if (!$mahasiswa) {
-            return redirect()->to('/admin/mahasiswa/index')->with('error', 'Mahasiswa not found');
+            return redirect()->to('/admin/mahasiswa')->with('error', 'Mahasiswa not found');
         }
 
         // Update mahasiswa data
@@ -77,7 +77,7 @@ class MahasiswaController extends Controller
             'angkatan' => $this->request->getPost('angkatan')
         ])->update();
 
-        return redirect()->to('/admin/mahasiswa/index')->with('success', 'Mahasiswa successfully updated');
+        return redirect()->to('/admin/mahasiswa')->with('success', 'Mahasiswa successfully updated');
     }
 
     // Delete mahasiswa
@@ -86,12 +86,12 @@ class MahasiswaController extends Controller
         // Find the mahasiswa first
         $mahasiswa = $this->mahasiswaModel->where('npm', $npm)->first();
         if (!$mahasiswa) {
-            return redirect()->to('/admin/mahasiswa/index')->with('error', 'Mahasiswa not found');
+            return redirect()->to('/admin/mahasiswa')->with('error', 'Mahasiswa not found');
         }
 
         // Delete mahasiswa
         $this->mahasiswaModel->where('npm', $npm)->delete();
-        return redirect()->to('/admin/mahasiswa/index')->with('success', 'Mahasiswa successfully deleted');
+        return redirect()->to('/admin/mahasiswa')->with('success', 'Mahasiswa successfully deleted');
     }
 }
 

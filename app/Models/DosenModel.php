@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class DosenModel extends Model
 {
     protected $table      = 'dosen';
-    protected $primaryKey = 'id_dosen';
+    protected $primaryKey = 'nidn';
     
     protected $allowedFields = [
         'nidn', 

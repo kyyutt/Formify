@@ -5,7 +5,7 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Data Mahasiswa</h3>
+                <h3>Data Dosen</h3>
                 <p class="text-subtitle text-muted">Daftar mahasiswa beserta detail informasi mereka</p>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
@@ -22,6 +22,7 @@
         <div class="card">
             <div class="card-header">
                 Data Mahasiswa
+                <a href="/admin/students/create" class="btn btn-primary btn-sm float-end">Add New</a>
             </div>
             <div class="card-body">
                 <table class="table table-striped" id="table1">
@@ -46,7 +47,8 @@
                                 <td><?= $mhs['semester'] ?></td>
                                 <td><?= $mhs['angkatan'] ?></td>
                                 <td>
-                                    <a href="/mahasiswa/edit/<?= $mhs['npm'] ?>" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="/admin/students/edit<?= $mhs['npm'] ?>" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="/admin/students/delete/<?= $mhs['npm'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus mahasiswa ini?');">Delete</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
